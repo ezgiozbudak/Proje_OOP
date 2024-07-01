@@ -14,6 +14,10 @@
         <th>Ürün Adı</th>
         <th>Fiyat</th>
         <th>Stock</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+       
+
     </tr>
     @foreach(var item in Model)
     {
@@ -22,6 +26,8 @@
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
+            <td><a href="/Product/DeleteProduct/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Product/UpdateProduct/@item.Id" class="btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>
